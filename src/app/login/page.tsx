@@ -16,10 +16,14 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     setLoading(true);
+    const redirectTo =
+      process.env.NEXT_PUBLIC_SUPABASE_REDIRECT_URL ||
+      `${window.location.origin}/dashboard`;
+
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/dashboard`,
+        emailRedirectTo: redirectTo,
       },
     });
     setLoading(false);
