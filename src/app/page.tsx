@@ -193,6 +193,22 @@ export default function Home() {
               </motion.div>
 
               <Form onSubmit={handleStart} />
+
+              <Button
+                className="
+                text-white text-lg font-semibold
+                transition duration-200
+                hover:brightness-110
+                border-0
+                shadow-none
+                cursor-pointer p-5
+              "
+                onClick={() => {
+                  router.push("/dashboard");
+                }}
+              >
+                📈 Ir para o dashboard
+              </Button>
             </div>
 
             <MotionImage
