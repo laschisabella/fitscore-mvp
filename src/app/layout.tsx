@@ -1,5 +1,13 @@
 import { AnimatePresence } from "framer-motion";
 import "./globals.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fitscore MVP",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,
